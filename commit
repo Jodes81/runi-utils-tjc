@@ -5,6 +5,6 @@
 # ssh-add ~/.ssh/id_rsa # add the key
 
 
-git add *
+git add --all
 git commit -m "RPi committed"
 git push -u origin master
