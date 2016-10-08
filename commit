@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# source ~/start-ssh-agent
+# eval `ssh-agent` # create the process
+# ssh-add ~/.ssh/id_rsa # add the key
+
+
+git add *
+git commit -m "RPi committed"
+git push -u origin master

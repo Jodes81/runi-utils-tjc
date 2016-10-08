@@ -1,0 +1,4 @@
+#!/bin/bash
+
+eval `ssh-agent` # create the process
+ssh-add ~/.ssh/id_rsa # add the key
