@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /root/installer/patcher/conf/conf.txt
+
 set -o errexit
 
 echo .
@@ -47,7 +49,7 @@ then
     rm -rf /boot/*
     echo .
     echo "----------------------------------------------------"
-    echo "Copying..."
+    echo "Copying from the reinstall dir to /boot/..."
     echo "    from: $REINSTALL_DIR/"
     echo "    to:   /boot/"
     echo "  ..."
