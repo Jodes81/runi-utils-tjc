@@ -50,11 +50,11 @@ then
     echo .
     echo "----------------------------------------------------"
     echo "Copying from the reinstall dir to /boot/..."
-    echo "    from: $REINSTALL_DIR/"
+    echo "    from: $REINSTALLER_DIR/"
     echo "    to:   /boot/"
     echo "  ..."
     echo "----------------------------------------------------"
-    cp -rf $REINSTALL_DIR/* /boot/
+    cp -rf $REINSTALLER_DIR/* /boot/
   else
     cp /boot/config-reinstall.txt /boot/config.txt
   fi
