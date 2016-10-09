@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -o errexit
+
+echo .
+echo ============ Going to reinstall ==============
+
+echo .
+read -p "Are you fucking sure you've saved what you need to? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  # do dangerous stuff
+  
+  read -p "Make new reinstaller? " -n 1 -r makenew
+
+  echo .
+  echo "----- Reinstalling in 5 seconds.... -------"
+  echo 5
+  sleep 1
+  echo 4
+  sleep 1
+  echo 4
+  sleep 1
+  echo 2
+  sleep 1
+  echo 1
+  sleep 1
+  echo .
+  
+  if [[ $makenew =~ ^[Yy]$ ]]
+  then
+    ~/installer/patcher/bin/make_reinstaller
+  else
+    cp /boot/config-reinstall.txt /boot/config.txt
+  fi
+  
+  
+  shutdown -r now
+  
+fi
+
