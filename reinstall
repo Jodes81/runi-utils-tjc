@@ -20,7 +20,7 @@ then
   fi
 
   echo .
-  echo "----- Reinstalling in 5 seconds.... -------"
+  echo "----- You have 5 seconds to control-C to cancel.... -------"
   echo 5
   sleep 1
   echo 4
@@ -36,10 +36,25 @@ then
   if [[ $makenew =~ ^[Yy]$ ]]
   then
     ~/installer/patcher/bin/make_reinstaller
+    rm -rf /boot/*
+    cp -rf $REINSTALL_DIR/* /boot/
   else
     cp /boot/config-reinstall.txt /boot/config.txt
   fi
   
+  echo .
+  echo "----- Reinstalling in 5 seconds .... -------"
+  echo 5
+  sleep 1
+  echo 4
+  sleep 1
+  echo 4
+  sleep 1
+  echo 2
+  sleep 1
+  echo 1
+  sleep 1
+  echo .
   
   shutdown -r now
   
