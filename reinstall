@@ -13,6 +13,11 @@ then
   # do dangerous stuff
   
   read -p "Make new reinstaller? " -n 1 -r makenew
+  if [[ ! $makenew =~ ^[YyNn]$ ]]
+  then
+    echo "You did not enter y or n. Exiting"
+    exit
+  fi
 
   echo .
   echo "----- Reinstalling in 5 seconds.... -------"
