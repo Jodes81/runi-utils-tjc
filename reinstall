@@ -35,8 +35,23 @@ then
   
   if [[ $makenew =~ ^[Yy]$ ]]
   then
+    echo .
+    echo "----------------------------------------------------"
+    echo "Running ~/installer/patcher/bin/make_reinstaller ..."
+    echo "----------------------------------------------------"
     ~/installer/patcher/bin/make_reinstaller
+    echo .
+    echo "----------------------------------------------------"
+    echo "Deleting contents of /boot/ ..."
+    echo "----------------------------------------------------"
     rm -rf /boot/*
+    echo .
+    echo "----------------------------------------------------"
+    echo "Copying..."
+    echo "    from: $REINSTALL_DIR/"
+    echo "    to:   /boot/"
+    echo "  ..."
+    echo "----------------------------------------------------"
     cp -rf $REINSTALL_DIR/* /boot/
   else
     cp /boot/config-reinstall.txt /boot/config.txt
