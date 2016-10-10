@@ -5,3 +5,5 @@ commit-all
 patcher-update
 
 ~/installer/undo-first-login.sh
+
+reboot
