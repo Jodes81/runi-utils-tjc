@@ -1,0 +1,7 @@
+#!/bin/bash
+
+commit-all
+
+patcher-update
+
+~/installer/undo-first-login.sh

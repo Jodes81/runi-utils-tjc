@@ -2,5 +2,8 @@
 
 
 chmod 0755 ~/utils/installer/reinstall-deep
+chmod 0755 ~/utils/installer/reinstall-shallow
+
 ln -s ~/utils/installer/reinstall-deep ~/bin/
+ln -s ~/utils/installer/reinstall-shallow ~/bin/
 
