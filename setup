@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-chmod 0755 ~/utils/installer/reinstall
-ln -s ~/utils/installer/reinstall ~/bin/
+chmod 0755 ~/utils/installer/reinstall-deep
+ln -s ~/utils/installer/reinstall-deep ~/bin/
 
